@@ -23,9 +23,9 @@ async def start(bot, update):
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text="<b>🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹</b>",
+                text="<b>🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭.\n\nHello Join Our Main Channel? Please Join My Updates Channel to use this Bot!😂\n And  start Me..!😁</b>",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text=" 📢 Join My Update Channel 📢", url=f"https://t.me/{MT_UPDATE}")]
+                    [ InlineKeyboardButton(text=" 💢 𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎𝚜 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 💢 ", url=f"https://t.me/{UPDATE_CHANNEL}")]
               ])
             )
             return
@@ -73,12 +73,13 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🗣️ Group', url=f'https://t.me/{MT_GROUP}'),
-        InlineKeyboardButton('📢 Channel', url =f'https://t.me/{MT_CHANNEL}')
+        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{MRK_YT_MASTER}'),
+        InlineKeyboardButton('Help 🤔', callback_data="help")
     ],[
-        InlineKeyboardButton('🤔Help', callback_data="help"),
-        InlineKeyboardButton('About😎', callback_data="about"),
-        InlineKeyboardButton('Close❌️', callback_data="close")
+        InlineKeyboardButton('🗣️Group', url=f'{MT_GROUP}'),
+        InlineKeyboardButton('Channel🔊', url=f'{MT_CHANNEL}')
+    ],[
+        InlineKeyboardButton('🖥️ OTT MOVIES 🖥️', url='https://t.me/KR_ROCKERS_DVD_WEB_OTT_MOVIES')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -96,8 +97,8 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('Support', url='t.me/Mo_Tech_Group'),
-        InlineKeyboardButton('Bot Updates', url=f't.me/{MT_UPDATES}')
+        InlineKeyboardButton('Support Group', url='t.me/KicchaRequest'),
+        InlineKeyboardButton('Movie Updates', url=f't.me/{MT_UPDATES}')
     ],[
         InlineKeyboardButton('🖥️ How To Own This Bot 🖥️', url=f'{MT_LINK}')
     ],[   
