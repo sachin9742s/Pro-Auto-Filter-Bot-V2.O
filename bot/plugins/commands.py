@@ -73,13 +73,12 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{MRK_YT_MASTER}'),
-        InlineKeyboardButton('Help 🤔', callback_data="help")
+        InlineKeyboardButton('🗣️ Group', url=f'https://t.me/{MT_GROUP}'),
+        InlineKeyboardButton('📢 Channel', url =f'https://t.me/{MT_CHANNEL}')
     ],[
-        InlineKeyboardButton('🗣️Group', url=f'{MT_GROUP}'),
-        InlineKeyboardButton('Channel🔊', url=f'{MT_CHANNEL}')
-    ],[
-        InlineKeyboardButton('🖥️ OTT MOVIES 🖥️', url='https://t.me/KR_ROCKERS_DVD_WEB_OTT_MOVIES')
+        InlineKeyboardButton('🤔Help', callback_data="help"),
+        InlineKeyboardButton('About😎', callback_data="about"),
+        InlineKeyboardButton('Close❌️', callback_data="close")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
